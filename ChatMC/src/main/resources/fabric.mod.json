@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "chatmc",
+  "version": "${version}",
+  "name": "ChatMC",
+  "description": "A lightweight, independent chat system that runs alongside vanilla Minecraft chat. ChatMC is a server-controlled communication tool. Chat logs are stored locally on the server machine. Server operators are solely responsible for moderation, log storage, retention, and compliance with applicable laws in their jurisdiction.",
+  "authors": [
+    "ChatMC Team"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/chatmc/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.chatmc.ChatMC"
+    ],
+    "client": [
+      "com.chatmc.client.ChatMCClient"
+    ],
+    "server": [
+      "com.chatmc.server.ChatMCServer"
+    ]
+  },
+  "mixins": [
+    "chatmc.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21.5",
+    "java": ">=21"
+  },
+  "suggests": {}
+}
